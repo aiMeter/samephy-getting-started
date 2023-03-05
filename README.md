@@ -33,4 +33,5 @@ Both boards are compatible with the Arduino and Raspberry Pi form factors and th
 - Arduino Form Factor Compatible
 - Raspberry Pi Form Factor Compatible
 
+#### General Features of SamePHY
 
