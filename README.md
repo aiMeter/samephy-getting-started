@@ -48,3 +48,8 @@ Both boards are compatible with the Arduino and Raspberry Pi form factors and th
 | Pinouts | 130 pinouts including GPIO pins and power pins | BOTH | |
 | Power Supply Units (PSUs) | USB1, USB3, CH55X Headers, Arduino Headers, Raspberry Pi Headers, Battery, Main AC Supply via Hi-Link PSU or any Cheap 25 x15 mm PSU (3 common form-factor supported) | BOTH | |
 | Board Dimension | 51 x 100mm ( < Arduino Mega Board size) |  | |
+| USB-to-Serial | CH552T can serve as a dual USB-to-Serial Interface yet supports native development |  | |
+| Protections | Automatic Power Supply Unit (PSU) Selectors, Fuses, Level Shifters and Regulators |  | 
+| Programming Interfaces | USB1, USB2, USB3 and exposed Header pins that support Device Firmware Updates (DFU) |  | |
+
+ \* means *under test*
