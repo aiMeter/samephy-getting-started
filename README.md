@@ -43,6 +43,8 @@ Both boards are compatible with the Arduino and Raspberry Pi form factors and th
 | BCXX/MCXX | GSM/GPRS/GPS modem from QUECTEL<br>(only available on SamePHY KANU) | TOP |	BC66/BC65, MC66 |
 | STM32WLXX | LoRa/LoRaWAN module/chipset from STMicroelectronics | TOP | Wi-e5 |
 | CH552T | Intel 8051 based micro controller | TOP | |
-
-
-
+| Micro SIM Slot | 	For micro SIMs | TOP | |
+| Antennas | 6 x ANTs (Helical, IPEX and PCB ANT Supported) | BOTH | |
+| Pinouts | 130 pinouts including GPIO pins and power pins | BOTH | |
+| Power Supply Units (PSUs) | USB1, USB3, CH55X Headers, Arduino Headers, Raspberry Pi Headers, Battery, Main AC Supply via Hi-Link PSU or any Cheap 25 x15 mm PSU (3 common form-factor supported) | BOTH | |
+| Board Dimension | 51 x 100mm ( < Arduino Mega Board size) |  | |
