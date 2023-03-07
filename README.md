@@ -1,13 +1,19 @@
 # samephy-getting-started
 Walking you through on ALL ABOUT THE SamePHY BOARD and how to use SamePHY seamlessly !!!.
+## Table of Contents
+## Brief Introduction
+Basicly, SamePHY is an easy development board which (amongst its other uses and capabilities) primarily functions as a gateway of all sorts of radios/wireless communication thereby brigding all similar or dissimilar wireless communication protocol. SamePHY is the final **beakthrough* in the world of IOT (Internet of Things). 
+
+In very simple terms: * A typical dissimilar communication media situation where you have a device A which only has bluetooth on it and you are looking to send message/data to and from another device B equipped with only WiFi, SamePHY is your helper on that !. In another situation where you want to use the bluetooth device A to access the internet or collect data from the internet, SamePHY has come to your rescue !. With your "only-GSM" enabled device, you may also want to send data to and from a WiFi device, don't worry SamePHY would mediate between them and the list goes on and on. You may also want to use SamePHY as gateway in similar communication media e.g WiFi to WiFi ...*
+
 ## The SamePHY board 
-SamePHY is a highly reconfigurable development board, a gateway of all sorts of radios, an Arduino shield, a HAT for two Raspberry Pi and a host for its “Jobs link here”. Being the gateway of all radio communications currently available is the basis for the name (SamePHY) meaning "Same PHYsical" Layer, as it is the last layer/bridge for all radio communications currently available, be it **THREAD, ZIGBEE, BLUETOOTH(BT/BLE), WIFI, LoRa/LoRaWAN, SigFox & wM-Bus, GSM/GPRS NBIoT/LTE Cat M1 (BC66) ...** The board houses up to 7 CPUs and 2 Ultra Low Power Processors all ranging from instruction sets such as ARM, Intel, RISC-V & Xtensa ISAs<br>
+SamePHY is a highly reconfigurable development board, a gateway of all sorts of radios, an Arduino shield, a HAT for two Raspberry Pi and a host for its “Jobs link here”. Being the gateway of all radio communications currently available is the basis for the name (SamePHY) meaning "Same PHYsical" Layer, as it is the last layer/bridge for all radio communications currently available, be it **THREAD, ZIGBEE, BLUETOOTH(BT/BLE), WIFI, LoRa/LoRaWAN, SigFox & wM-Bus, GSM/GPRS NBIoT/LTE Cat M1 (BC66) ...** The board houses up to 7 CPUs and 2 Ultra Low Power Processors all ranging from instruction sets such as ARM, Intel, RISC-V & Xtensa ISAs with a Board Dimension of 51 x 100mm which is lesser than the size of an Arduino Mega Board<br>
 <br>
 #### Currently SamePHY board comes in two flavors 
 - SamePHY MUSK (also called "Module M")
 - SamePHY KANU (also called "Module K")
 
-Both boards are compatible with the Arduino and Raspberry Pi form factors and they only differ in the type of GSM/GPRS modem on-board - that is, where **Module M** uses **SIMXXX** (a modem series from SIMCOM manufacturers), **Module K** uses **BCXX/MCXX** (a modem series from QUECTEL manufacturers).
+Both flavors are compatible with the Arduino and Raspberry Pi form factors and they only differ in the type of GSM/GPRS modem on-board - that is, where **Module M** uses **SIMXXX** (a modem series from SIMCOM manufacturers), **Module K** uses **BCXX/MCXX** (a modem series from QUECTEL manufacturers).
 
 #### Features of SamePHY MUSK
 
@@ -53,3 +59,8 @@ Both boards are compatible with the Arduino and Raspberry Pi form factors and th
 | Programming Interfaces | USB1, USB2, USB3 and exposed Header pins that support Device Firmware Updates (DFU) |  | |
 
  \* means *under test*
+ 
+ Before jumping right into using SamePHY it is worth 
+ 
+ ### Using SamePHY
+ 
