@@ -31,6 +31,33 @@ For the sake of your clear understanding of the SamePHY board and for your easy 
 ### The SamePHY board 
 SamePHY is a highly reconfigurable development board, a gateway of all sorts of radios, an Arduino shield, a HAT for two Raspberry Pi and a host for its “Jobs link here”. Being the gateway of all radio communications currently available is the basis for the name (SamePHY) meaning "Same PHYsical" Layer, as it is the last layer/bridge for all radio communications currently available, be it **THREAD, ZIGBEE, BLUETOOTH(BT/BLE), WIFI, LoRa/LoRaWAN, SigFox & wM-Bus, GSM/GPRS NBIoT/LTE Cat M1 (BC66) ...** The board houses up to 7 CPUs and 2 Ultra Low Power Processors all ranging from instruction sets such as ARM, Intel, RISC-V & Xtensa ISAs with a Board Dimension of 51 x 100mm which is lesser than the size of an Arduino Mega Board<br>
 <br>
+
+
+:smiley: Happy to take a look at what the SamePHY board is made up of, i'll show you that the board is only made up of five major components:
+
+- SOC (System on Chip)
+- USB ports
+- On board Peripherals
+- Header Pinouts
+- Power Supply units
+
+<br>
+
+*SOC (System on Chip)*
+
+The SamePHY board has 5 SOC's on it namely, two ESP32XX, SIMXX (or BCXX/MCXX), STM32WLXX, CH552T.(the suffix-"XX" represent variants/version of the chips). Each can be programmed natively and independently<br> 
+ESP32XX: It feels great to know the SamePHY board carries on it the popular ESP32 chip and that is carries not just one but two of this chip. ESP32XX (manufactured by Espressif) is a low-power MCU-based system on a chip (SoC) with integrated 2.4 GHz Wi-Fi and Bluetooth Low Energy (Bluetooth LE). It consists of high-performance dual-core microprocessor (Xtensa 32-bit LX7), a low power coprocessor, a Wi-Fi baseband, a Bluetooth LE baseband, RF module, and numerous peripherals.<br>
+As mentioned earlier, SamePHY board carries two ESP32XX chips, one on the top side of the board and another one at the bottom. For ease of identification we have called the one at the top ESP32XX_TOP and the one at bottom ESP32XX_BOTTOM.<br> 
+**ESP32XX_TOP** can be any of the variant- ESP32 WROOM , ESP32 WROVER <br>
+**ESP32XX_BOTTOM** can be any of the variant- ESP32-S3, ESP32-H2, ESP32-C6 (last two are under development)
+
+SIMXX: This is the GSM/GPRS modem series manufactured by SIMCOM
+
+BCXX/MCXX: This is the GSM/GPRS modem series manufactured by QUECTEL
+
+
+
+
 #### Currently SamePHY board comes in two flavors 
 - SamePHY MUSK (also called "Module M")
 - SamePHY KANU (also called "Module K")
