@@ -46,14 +46,19 @@ SamePHY is a highly reconfigurable development board, a gateway of all sorts of 
 *SOC (System on Chip)*
 
 The SamePHY board has 5 SOC's on it namely, two ESP32XX, SIMXX (or BCXX/MCXX), STM32WLXX, CH552T.(the suffix-"XX" represent variants/version of the chips). Each can be programmed natively and independently<br> 
-ESP32XX: It feels great to know the SamePHY board carries on it the popular ESP32 chip and that is carries not just one but two of this chip. ESP32XX (manufactured by Espressif) is a low-power MCU-based system on a chip (SoC) with integrated 2.4 GHz Wi-Fi and Bluetooth Low Energy (Bluetooth LE). It consists of high-performance dual-core microprocessor (Xtensa 32-bit LX7), a low power coprocessor, a Wi-Fi baseband, a Bluetooth LE baseband, RF module, and numerous peripherals.<br>
+-ESP32XX: It feels great to know the SamePHY board carries on it the popular ESP32 chip and that is carries not just one but two of this chip. ESP32XX (manufactured by Espressif) is a low-power MCU-based system on a chip (SoC) with integrated 2.4 GHz Wi-Fi and Bluetooth Low Energy (Bluetooth LE). It consists of high-performance dual-core microprocessor (Xtensa 32-bit LX7), a low power coprocessor, a Wi-Fi baseband, a Bluetooth LE baseband, RF module, and numerous peripherals.<br>
 As mentioned earlier, SamePHY board carries two ESP32XX chips, one on the top side of the board and another one at the bottom. For ease of identification we have called the one at the top ESP32XX_TOP and the one at bottom ESP32XX_BOTTOM.<br> 
 **ESP32XX_TOP** can be any of the variant- ESP32 WROOM , ESP32 WROVER <br>
-**ESP32XX_BOTTOM** can be any of the variant- ESP32-S3, ESP32-H2, ESP32-C6 (last two are under development)
+**ESP32XX_BOTTOM** can be any of the variant- ESP32-S3, ESP32-H2, ESP32-C6 (last two are under development)<br>
+-SIMXX: This is the GSM/GPRS modem series manufactured by SIMCOM<br>
+-BCXX/MCXX: This is the GSM/GPRS modem series manufactured by QUECTEL<br>
+-STM32WLXX:LoRa/LoRaWAN module/chipset from STMicroelectronics<br>
+-CH552T:Intel 8051 based micro controller
 
-SIMXX: This is the GSM/GPRS modem series manufactured by SIMCOM
 
-BCXX/MCXX: This is the GSM/GPRS modem series manufactured by QUECTEL
+*USB ports*
+
+On SamePHY board there are three Micro USB ports labelled USB1, USB2, USB3
 
 
 
