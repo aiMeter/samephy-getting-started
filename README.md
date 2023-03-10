@@ -81,7 +81,7 @@ Each supply unit is protected from each other to avoid back flow
 
 *Buttons and LEDs*
 
-**Buttons** : All SoCs have at *least one* user button switch. They're as follows: <br>
+**Buttons** : The SamePHY board has seven buttons. All SoCs have at *least one* user button switch. They're as follows: <br>
 ESP32_TOP - 2 buttons (RST & GPIO 0) <br>
 ESP32_BOTTOM - 2 buttons (RST & GPIO 0) <br>
 STM32WL - 2 buttons (RST & GPIO PB13) <br>
@@ -104,7 +104,7 @@ SIMXX - GPIO 64 <br>
 BCXX - GPIO ?? (yet to be determined) <br>
 CH552T - GPIO 33
 
-While using the buttons of each SOC, in software, each button wired to a GPIO has been defined as "BUTTON_BUILTIN", that is :
+While using the LED of each SOC, in software, each LED wired to a GPIO has been defined as "LED_BUILTIN", that is :
 
 ```
 #define LED_BUILTIN X
@@ -116,7 +116,10 @@ where X is the GPIO number <br>
 
 *Header Pinouts*
 
-SamePHY has up to 
+SamePHY has up to 130 pinouts including I/O pins and power pins. These header pins are distributed both on the topside and bottomside of the board. The pins are arranged in such a way as to make possible a kind of layered stacking on the board. That is you can stack a variety of Arduino form factor, Raspberry Pi form factor and SamePHY JOBs  both at the top and bottom of the board.<br>
+The I/O pins allows all the SOCs interact with the outside world so that the I/O pins can control or drive loads connected to them. These pins are either analog or digital. The pins also provide peripheral interfaces such as **UART, I2C, SPI, PWM** and lots more.
+
+The I/O pins on the headers on the board are labelled from S0, S1, S2, S3, S4, ... so that when writing programs to use these pins they are identified by their associated pin name/nomenclature. <sub>For more information on this see [Understanding SamePHY Software](#understanding-samephy-software)</sub>
 
 
 #### Currently SamePHY board comes in two flavors 
@@ -149,7 +152,7 @@ Both flavors are compatible with the Arduino and Raspberry Pi form factors and t
 - Arduino Form Factor Compatible
 - Raspberry Pi Form Factor Compatible
 
-#### General Features Overview of SamePHY
+#### General Feature Overview of SamePHY
 | Features | Description | Side of Board | Variant |
 | -------- | ----------- | ------------- | ------- |
 | CPU Core | 7 CPUs and 2 Ultra Low Power Processors from ARM, Intel, RISC-V & Xtensa ISAs | Both | |
