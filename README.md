@@ -60,9 +60,9 @@ As mentioned earlier, SamePHY board carries two ESP32XX chips, one on the top si
 *USB ports*
 
 On SamePHY board there are three Micro USB ports labelled USB 1, USB 2 and USB 3<br>
--**USB 1**: This port is shared by three of SOC's (ESP32XX_TOP, STM32WLXX, CH552T). The port supports independent native development on the three SOC's (though support for that of STM32WLXX is not ready as of today). It is also the main power supply input to the entire board (except ESP32_B which uses USB 3 by default). To power ESP32_B from USB 1, short-circuit Jumper *S* at the middle of the Arduino form factor board. To switch between a transparent USB-to-UART bridge and a Native development on CH552T, perform a power on reset and boot by short-circuiting Jumper B near USB 1, then power-on or plug the board to upload user codes.<br>
+-**USB 1**: This port is shared by three of SOC's (ESP32XX_TOP, STM32WLXX, CH552T). The port supports independent native development on the three SOC's (though support for that of STM32WLXX is not ready as of today). It is also the main power supply input to the entire board (except ESP32_BOTTOM which uses USB 3 by default). To power ESP32_BOTTOM from USB 1, short-circuit Jumper *S* at the middle of the Arduino form factor board. To switch between a transparent USB-to-UART bridge and a Native development on CH552T, perform a power on reset and boot by short-circuiting Jumper B near USB 1, then power-on or plug the board to upload user codes.<br>
 -**USB 2**:  Used by SIMXX or BCXX series MODEMs. Currently, only BCXX series has native development support on USB 2. Note that USB 2 is only for Data/program transfer and not for power supply to the MODEMs. USB 1 or other PSUs (see below) must be plugged to supply power to the MODEMs<br>
--**USB 3**:  Used by ESP32_BOTTOM. Used to supply power, communicate and program the ESP32_B. Can be used to develop natively on ESP32_BOTTOM, different USB to Other wired protocol interfaces such as I2C UART SPI I2S JTAG etc.
+-**USB 3**:  Used by ESP32_BOTTOM. Used to supply power, communicate and program the ESP32_BOTTOM. Can be used to develop natively on ESP32_BOTTOM, different USB to Other wired protocol interfaces such as I2C UART SPI I2S JTAG etc.
 
 <br>
 
@@ -73,8 +73,7 @@ You can power SamePHY in many ways
 2. Battery
 3. Header pins (from Arduino or Raspberry PIs)
 4. Mains (AC Supply when mounted a cheap power converter)
-5. Solar *under construction*
-
+5. Solar *under construction* <br>
 Each supply unit is protected from each other to avoid back flow
 
 <br>
