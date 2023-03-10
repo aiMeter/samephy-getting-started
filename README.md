@@ -37,30 +37,86 @@ SamePHY is a highly reconfigurable development board, a gateway of all sorts of 
 
 - SOC (System on Chip)
 - USB ports
-- On board Peripherals
+- Buttons and LEDs
+- PSU (Power Supply units)
 - Header Pinouts
-- Power Supply units
 
 <br>
 
 *SOC (System on Chip)*
 
 The SamePHY board has 5 SOC's on it namely, two ESP32XX, SIMXX (or BCXX/MCXX), STM32WLXX, CH552T.(the suffix-"XX" represent variants/version of the chips). Each can be programmed natively and independently<br> 
--ESP32XX: It feels great to know the SamePHY board carries on it the popular ESP32 chip and that is carries not just one but two of this chip. ESP32XX (manufactured by Espressif) is a low-power MCU-based system on a chip (SoC) with integrated 2.4 GHz Wi-Fi and Bluetooth Low Energy (Bluetooth LE). It consists of high-performance dual-core microprocessor (Xtensa 32-bit LX7), a low power coprocessor, a Wi-Fi baseband, a Bluetooth LE baseband, RF module, and numerous peripherals.<br>
+-**ESP32XX**: It feels great to know the SamePHY board carries on it the popular ESP32 chip and that is carries not just one but two of this chip. ESP32XX (manufactured by Espressif) is a low-power MCU-based system on a chip (SoC) with integrated 2.4 GHz Wi-Fi and Bluetooth Low Energy (Bluetooth LE). It consists of high-performance dual-core microprocessor (Xtensa 32-bit LX7), a low power coprocessor, a Wi-Fi baseband, a Bluetooth LE baseband, RF module, and numerous peripherals.<br>
 As mentioned earlier, SamePHY board carries two ESP32XX chips, one on the top side of the board and another one at the bottom. For ease of identification we have called the one at the top ESP32XX_TOP and the one at bottom ESP32XX_BOTTOM.<br> 
-**ESP32XX_TOP** can be any of the variant- ESP32 WROOM , ESP32 WROVER <br>
-**ESP32XX_BOTTOM** can be any of the variant- ESP32-S3, ESP32-H2, ESP32-C6 (last two are under development)<br>
--SIMXX: This is the GSM/GPRS modem series manufactured by SIMCOM<br>
--BCXX/MCXX: This is the GSM/GPRS modem series manufactured by QUECTEL<br>
--STM32WLXX:LoRa/LoRaWAN module/chipset from STMicroelectronics<br>
--CH552T:Intel 8051 based micro controller
+*ESP32XX_TOP* can be any of the variant- ESP32 WROOM , ESP32 WROVER <br>
+*ESP32XX_BOTTOM* can be any of the variant- ESP32-S3, ESP32-H2, ESP32-C6 (last two are under development)<br>
+-**SIMXX**: This is the GSM/GPRS modem series manufactured by SIMCOM. It is only available on SamePHY MUSK, see [Flavours of SamePHY](#currently-samephy-board-comes-in-two-flavors)<br>
+-**BCXX/MCXX**: This is the GSM/GPRS modem series manufactured by QUECTEL.It is only available on SamePHY KANU, see [Flavours of SamePHY](#currently-samephy-board-comes-in-two-flavors)<br>
+-**STM32WLXX**:  LoRa/LoRaWAN module/chipset from STMicroelectronics<br>
+-**CH552T**: Intel 8051 based micro controller
 
+<br>
 
 *USB ports*
 
-On SamePHY board there are three Micro USB ports labelled USB1, USB2, USB3
+On SamePHY board there are three Micro USB ports labelled USB 1, USB 2 and USB 3<br>
+-**USB 1**: This port is shared by three of SOC's (ESP32XX_TOP, STM32WLXX, CH552T). The port supports independent native development on the three SOC's (though support for that of STM32WLXX is not ready as of today). It is also the main power supply input to the entire board (except ESP32_B which uses USB 3 by default). To power ESP32_B from USB 1, short-circuit Jumper *S* at the middle of the Arduino form factor board. To switch between a transparent USB-to-UART bridge and a Native development on CH552T, perform a power on reset and boot by short-circuiting Jumper B near USB 1, then power-on or plug the board to upload user codes.<br>
+-**USB 2**:  Used by SIMXX or BCXX series MODEMs. Currently, only BCXX series has native development support on USB 2. Note that USB 2 is only for Data/program transfer and not for power supply to the MODEMs. USB 1 or other PSUs (see below) must be plugged to supply power to the MODEMs<br>
+-**USB 3**:  Used by ESP32_BOTTOM. Used to supply power, communicate and program the ESP32_B. Can be used to develop natively on ESP32_BOTTOM, different USB to Other wired protocol interfaces such as I2C UART SPI I2S JTAG etc.
 
+<br>
 
+*Power supply Units (PSUs)*
+
+You can power SamePHY in many ways
+1. USBs (1, 2, 3)
+2. Battery
+3. Header pins (from Arduino or Raspberry PIs)
+4. Mains (AC Supply when mounted a cheap power converter)
+5. Solar *under construction*
+
+Each supply unit is protected from each other to avoid back flow
+
+<br>
+
+*Buttons and LEDs*
+
+**Buttons** : All SoCs have at *least one* user button switch. They're as follows: <br>
+ESP32_TOP - 2 buttons (RST & GPIO 0) <br>
+ESP32_BOTTOM - 2 buttons (RST & GPIO 0) <br>
+STM32WL - 2 buttons (RST & GPIO PB13) <br>
+SIMXX/BCXX - 1 button (RST) <br>
+CH552T - 1 button (GPIO 14)
+
+While using the buttons of each SOC, in software, each button wired to a GPIO has been defined as "BUTTON_BUILTIN", that is :
+```
+#define BUTTON_BUILTIN X
+```
+where X is the GPIO number <br>
+CH552T GPIO nomenclature is pin PX.Y = XY in Arduino code e.g P1.4 = 14<br>
+<sub>For more information on this see [Understanding SamePHY Software](#understanding-samephy-software)</sub>
+
+**LEDs**: All SoCs have *one dedicated LED* they're as follows <br>
+ESP32_TOP - GPIO 2 <br>
+ESP32_BOTTOM - GPIO 48 <br>
+STM32WL - GPIO PB5 <br>
+SIMXX - GPIO 64 <br>
+BCXX - GPIO ?? (yet to be determined) <br>
+CH552T - GPIO 33
+
+While using the buttons of each SOC, in software, each button wired to a GPIO has been defined as "BUTTON_BUILTIN", that is :
+
+```
+#define LED_BUILTIN X
+```
+where X is the GPIO number <br>
+<sub>For more information on this see [Understanding SamePHY Software](#understanding-samephy-software)</sub>
+
+<br>
+
+*Header Pinouts*
+
+SamePHY has up to 
 
 
 #### Currently SamePHY board comes in two flavors 
