@@ -3,22 +3,25 @@ Walking you through on ALL ABOUT THE SamePHY BOARD and how to use SamePHY seamle
 ## Table of Contents
 - [samephy-getting-started](#samephy-getting-started)
   - [Table of Contents](#table-of-contents)
-  - [Brief Introduction](#brief-introduction)
+  - [Brief Introduction](#brief-introduction-to-samephy--the-iot-router)
   - [Understanding SamePHY Hardware](#understanding-samephy-hardware)
     - [The SamePHY board](#the-samephy-board)
       - [Flavours of SamePHY](#currently-samephy-board-comes-in-two-flavors)
       - [Features of SamePHY MUSK](#features-of-samephy-musk)
       - [Features of SamePHY KANU](#features-of-samephy-kanu)
-    - [General Features Overview of SamePHY](#general-features-overview-of-samephy)
+    - [General Features Overview of SamePHY](#general-feature-overview-of-samephy)
   - [Understanding SamePHY Software](#understanding-samephy-software)
   - [Making Use of SamePHY](#making-use-of-samephy)
     
 
 
-## Brief Introduction
-Basicly, SamePHY is an easy development board which (amongst its other uses and capabilities) primarily functions as a gateway of all sorts of radios/wireless communication thereby brigding all similar or dissimilar wireless communication protocol. SamePHY is the final **beakthrough** in the world of IOT (Internet of Things). 
+## Brief Introduction to SamePHY -the IOT router
+Basicly, SamePHY(also known as "The IOT Router" ) is an easy development board which (amongst its other uses and capabilities) primarily functions as a gateway of all sorts of radios/wireless communication thereby brigding all similar or dissimilar wireless communication protocol. SamePHY is the final **beakthrough** in the world of IOT (Internet of Things). 
 
 **In very simple terms:**  *A typical dissimilar communication media situation where you have a device (A) which only has bluetooth on it and you are looking to send message/data to and from another device (B) equipped with only WiFi, SamePHY is your helper on that !. In another situation where you want to use the bluetooth device (A) to access the internet or collect data from the internet, SamePHY has come to your rescue !. With your "only-GSM" enabled device, you may also want to send data to and from a WiFi device, don't worry SamePHY would mediate between them and the list goes on and on. You may also want to use SamePHY as gateway in similar communication media e.g WiFi to WiFi ...* 
+
+Being a **one stop solution**, SamePHY has an endless variety of application domains ranging from **simple domains** such as :<br>
+Learning playground for hobbyist and tech enthusiasts, STEM Educational material for students, to  more **complex domains** such as Scientific and Engineering Research purposes, High end industrial automation e.t.c.
 
 For the sake of your clear understanding of the SamePHY board and for your easy development while using the board, i'll will break this tutorial/documentation into three parts:
 
@@ -172,9 +175,10 @@ Both flavors are compatible with the Arduino and Raspberry Pi form factors and t
 
  \* means *under test*
  
- Before jumping right into using SamePHY it is worth 
- 
+ Before jumping right into using SamePHY it is worth:  
  ## Understanding SamePHY Software
- software
+ 
+ The true power of the gateway/routing capability of SamePHY lies within the [SamePHY Software-core Library](https://github.com/aiMeter/samephy) which can be seen and gotten from    
+ 
  ## Making Use of SamePHY
  
